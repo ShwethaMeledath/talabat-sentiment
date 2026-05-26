@@ -1,4 +1,4 @@
-# Talabat Sentiment Analysis Dashboard
+# AI-Powered Talabat Sentiment Analysis Dashboard
 
 An interactive sentiment analysis dashboard built using Python and Streamlit to analyze Talabat app reviews from the Google Play Store.
 
@@ -8,13 +8,27 @@ This allows the dashboard to run fully without requiring paid API access while s
 
 ---
 
+# Dashboard Preview
+
+## Main Dashboard
+
+![Dashboard Preview](screenshots/dashboard.png)
+
+## Sentiment Analytics
+
+![Analytics](screenshots/charts.png)
+
+---
+
 # Features
 
-- Google Play Store review scraping
-- Sentiment analysis dashboard
-- Interactive visualizations using Plotly
-- Streamlit-based UI
-- Mock AI-classified dataset support
+- Automated Google Play Store review scraping
+- AI-ready sentiment analysis pipeline
+- Interactive Streamlit dashboard
+- Sentiment distribution visualizations
+- Review trend analytics
+- Mock-data fallback architecture
+- Secure environment-variable configuration
 - Optional Anthropic Claude API integration
 
 ---
@@ -31,6 +45,18 @@ This allows the dashboard to run fully without requiring paid API access while s
 
 ---
 
+# Workflow
+
+1. Scrape Talabat reviews from Google Play Store
+2. Process and clean review data
+3. Classify sentiment using:
+   - Mock classified dataset (default)
+   - OR Anthropic Claude API (optional)
+4. Visualize insights in Streamlit dashboard
+5. Analyze sentiment trends and distributions
+
+---
+
 # Installation
 
 ## Clone Repository
@@ -39,6 +65,8 @@ This allows the dashboard to run fully without requiring paid API access while s
 git clone https://github.com/ShwethaMeledath/talabat-sentiment.git
 cd talabat-sentiment
 ```
+
+---
 
 ## Create Virtual Environment
 
@@ -56,6 +84,8 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
+---
+
 ## Install Dependencies
 
 ```bash
@@ -71,7 +101,7 @@ pip install -r requirements.txt
 Runs using pre-classified sentiment data.
 
 ```bash
-streamlit run app.py
+python -m streamlit run app.py
 ```
 
 No API key required.
@@ -95,7 +125,7 @@ python services/classify_reviews.py
 ### Launch Dashboard
 
 ```bash
-streamlit run app.py
+python -m streamlit run app.py
 ```
 
 ---
@@ -112,15 +142,50 @@ The `.env` file is ignored using `.gitignore` for security.
 
 ---
 
-# Screenshots
+# .env.example
 
-Add dashboard screenshots inside the `screenshots/` folder.
+Create a `.env.example` file containing:
 
-Example:
-
-```md
-![Dashboard](screenshots/dashboard.png)
+```env
+ANTHROPIC_API_KEY=your_api_key_here
 ```
+
+---
+
+# Project Structure
+
+talabat-sentiment/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+├── .gitignore
+├── .env.example
+│
+├── data/
+├── services/
+├── screenshots/
+
+---
+
+# Key Learnings
+
+Through this project, I explored:
+- AI workflow integration
+- Streamlit dashboard development
+- Data visualization using Plotly
+- Secure API key management
+- Mock-driven development approaches
+- Structuring reproducible analytics pipelines
+
+---
+
+# Resume Highlights
+
+- Built a Python-based sentiment analytics dashboard using Streamlit and Plotly
+- Designed a sentiment-classification workflow with optional Anthropic Claude API integration
+- Implemented mock-data fallback architecture to enable reproducible local execution without external API dependency
+- Applied secure `.env`-based configuration management and GitHub secret-safe workflows
 
 ---
 
