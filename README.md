@@ -199,6 +199,9 @@ Through this project, I explored:
 
 ---
 
+Note:
+Ensure sufficient disk space is available before installing dependencies and creating the virtual environment.
+
 # Author
 
 Shwetha AM
